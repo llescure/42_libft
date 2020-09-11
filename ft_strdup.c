@@ -1,22 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lea <llescure@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/08 18:38:36 by lea               #+#    #+#             */
-/*   Updated: 2020/09/09 16:58:05 by lea              ###   ########.fr       */
+/*   Created: 2020/09/09 18:47:47 by lea               #+#    #+#             */
+/*   Updated: 2020/09/09 19:12:46 by lea              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_toupper(int c)
+#include <stdlib.h>
+
+unsigned int	ft_strlen(const char *str);
+
+char	*ft_strdup(const char *s1)
 {
-	char final;
-	if (c >= 'a' && c <= 'z')
+	int i;
+	char *dest;
+
+	if (!(dest = malloc(sizeof(char) * ft_strlen(s1) + 1)))
+		return (NULL);
+	i = 0;
+	while (s1[i] != '\0')
 	{
-		final = c - 32;
-		return (final);
+		dest[i] = s1[i];
+		i++;
 	}
-	return (c);
+	dest[i] = '\0';
+	return (dest);
+}
+
+unsigned int	ft_strlen(const char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }

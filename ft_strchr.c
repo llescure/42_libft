@@ -6,22 +6,22 @@
 /*   By: lea <llescure@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/08 19:30:47 by lea               #+#    #+#             */
-/*   Updated: 2020/09/08 19:54:21 by lea              ###   ########.fr       */
+/*   Updated: 2020/09/09 15:24:45 by lea              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(char *str, char c)
+char	*ft_strchr(const char *str, int c)
 {
 	int i;
 
 	i = 0;
 	if (c == '\0')
-		return (str);
+		return ((char *)str);
 	while (str[i] != '\0')
 	{
 		if (c == str[i])
 		{
-			return (&str[i]);	
+			return ((char *)&str[i]);	
 		}
 		i++;
 	}

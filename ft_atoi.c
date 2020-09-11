@@ -6,14 +6,14 @@
 /*   By: lea <llescure@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/08 16:24:52 by lea               #+#    #+#             */
-/*   Updated: 2020/09/08 18:37:05 by lea              ###   ########.fr       */
+/*   Updated: 2020/09/09 16:48:10 by lea              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_is_white_space(char c);
-int		ft_check_sign(char *str);
+int		ft_check_sign(const char *str);
 
-int		ft_atoi(char *str)
+int		ft_atoi(const char *str)
 {
 	int i;
 	int rslt;
@@ -46,7 +46,7 @@ int		ft_is_white_space(char c)
 	return (0);
 }
 
-int		ft_check_sign(char *str)
+int		ft_check_sign(const char *str)
 {
 	int sign;
 	int i;

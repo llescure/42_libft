@@ -1,22 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lea <llescure@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/08 18:38:36 by lea               #+#    #+#             */
-/*   Updated: 2020/09/09 16:58:05 by lea              ###   ########.fr       */
+/*   Created: 2020/09/09 10:33:31 by lea               #+#    #+#             */
+/*   Updated: 2020/09/09 13:29:21 by lea              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_toupper(int c)
+int		ft_strlen(const char *str);
+
+char	*ft_strrchr(const char *str, int c)
 {
-	char final;
-	if (c >= 'a' && c <= 'z')
+	int i;
+	int compt;
+
+	compt = 0;
+	i = 0;
+	while (i <= ft_strlen(str))
 	{
-		final = c - 32;
-		return (final);
+		if (str[i] == c)
+			compt = i;
+		i++;
 	}
-	return (c);
+	if (compt == 0)
+		return (0);
+	return ((char *)&str[compt]);
+}
+
+int		ft_strlen(const char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }
