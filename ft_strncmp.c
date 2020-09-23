@@ -6,11 +6,13 @@
 /*   By: lea <llescure@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 16:59:23 by lea               #+#    #+#             */
-/*   Updated: 2020/09/09 18:15:04 by lea              ###   ########.fr       */
+/*   Updated: 2020/09/23 12:28:41 by lea              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strncmp(const char *s1, const char *s2, unsigned int n)
+#include <stdio.h>
+
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned int i;
 

@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lea <llescure@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/22 17:21:49 by lea               #+#    #+#             */
-/*   Updated: 2020/09/23 12:12:10 by lea              ###   ########.fr       */
+/*   Created: 2020/09/23 11:35:52 by lea               #+#    #+#             */
+/*   Updated: 2020/09/23 12:55:50 by lea              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	char *temp;
 	unsigned int i;
+	const char *tempsrc;
+	char *tempdest;
 
-	temp = s;
 	i = 0;
-	if (n == 0)
-		return ;
+	tempsrc = src;
+	tempdest = dst;
 	while (i < n)
 	{
-		temp[i] = 0;
+		tempdest[i] = tempsrc[i];
 		i++;
 	}
+	return (tempdest);
 }
