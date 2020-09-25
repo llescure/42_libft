@@ -6,11 +6,19 @@
 /*   By: lea <llescure@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 10:33:31 by lea               #+#    #+#             */
-/*   Updated: 2020/09/09 13:29:21 by lea              ###   ########.fr       */
+/*   Updated: 2020/09/25 16:05:54 by lea              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(const char *str);
+int		ft_strlen(const char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
 
 char	*ft_strrchr(const char *str, int c)
 {
@@ -28,14 +36,4 @@ char	*ft_strrchr(const char *str, int c)
 	if (compt == 0)
 		return (0);
 	return ((char *)&str[compt]);
-}
-
-int		ft_strlen(const char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
 }

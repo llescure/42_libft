@@ -1,18 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lea <llescure@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/08 16:18:22 by lea               #+#    #+#             */
-/*   Updated: 2020/09/25 16:00:54 by lea              ###   ########.fr       */
+/*   Created: 2020/09/25 14:33:28 by lea               #+#    #+#             */
+/*   Updated: 2020/09/25 16:08:31 by lea              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+#include <stdio.h>
+#include <stdlib.h>
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	if (c >= 0 && c <= 177)
-		return (1);
-	return (0);
+	unsigned int			i;
+	unsigned int			j;
+	char					*str;
+
+	if (!(str = malloc(sizeof(char) * len)))
+		return (NULL);
+	i = start;
+	j = 0;
+	while (j < len && s[i] != '\0')
+	{
+		str[j] = s[i];
+		j++;
+		i++;
+	}
+	return (str);
 }

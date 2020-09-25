@@ -6,15 +6,15 @@
 /*   By: lea <llescure@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/23 14:59:43 by lea               #+#    #+#             */
-/*   Updated: 2020/09/23 16:42:03 by lea              ###   ########.fr       */
+/*   Updated: 2020/09/25 16:10:21 by lea              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-unsigned int		ft_strlen(char *str)
+unsigned int	ft_strlen(char *str)
 {
-	unsigned int i;
+	unsigned int				i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -22,11 +22,11 @@ unsigned int		ft_strlen(char *str)
 	return (i);
 }
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void			*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char *tempdest;
-	const char *tempsrc;
-	unsigned int i;
+	char						*tempdest;
+	const char					*tempsrc;
+	unsigned int				i;
 
 	i = 0;
 	tempdest = dst;

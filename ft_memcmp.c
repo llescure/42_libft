@@ -6,7 +6,7 @@
 /*   By: lea <llescure@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/24 21:31:06 by lea               #+#    #+#             */
-/*   Updated: 2020/09/24 21:53:25 by lea              ###   ########.fr       */
+/*   Updated: 2020/09/25 15:59:00 by lea              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned int i;
-	const char *temps1;
-	const char *temps2;
+	unsigned int			i;
+	const char				*temps1;
+	const char				*temps2;
 
 	i = 0;
 	temps1 = s1;
@@ -24,7 +24,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (i < n)
 	{
 		if (temps1[i] != temps2[i])
-			return ((unsigned char)temps1[i] - (unsigned char) temps2[i]);
+			return ((unsigned char)temps1[i] - (unsigned char)temps2[i]);
 		i++;
 	}
 	return (0);

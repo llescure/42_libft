@@ -6,7 +6,7 @@
 /*   By: lea <llescure@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/24 21:56:16 by lea               #+#    #+#             */
-/*   Updated: 2020/09/24 22:16:32 by lea              ###   ########.fr       */
+/*   Updated: 2020/09/25 16:12:34 by lea              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void *ptr;
-	char *str;
-	unsigned int i;
-	
+	void				*ptr;
+	char				*str;
+	unsigned int		i;
+
 	i = 0;
 	if (!(ptr = malloc(count * size)))
 		return (NULL);

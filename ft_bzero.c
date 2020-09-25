@@ -6,7 +6,7 @@
 /*   By: lea <llescure@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/22 17:21:49 by lea               #+#    #+#             */
-/*   Updated: 2020/09/23 12:12:10 by lea              ###   ########.fr       */
+/*   Updated: 2020/09/25 16:00:21 by lea              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	char *temp;
-	unsigned int i;
+	char				*temp;
+	unsigned int		i;
 
 	temp = s;
 	i = 0;
