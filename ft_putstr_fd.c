@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/17 23:34:50 by llescure          #+#    #+#             */
-/*   Updated: 2020/10/17 23:34:54 by llescure         ###   ########.fr       */
+/*   Created: 2020/10/17 23:20:10 by llescure          #+#    #+#             */
+/*   Updated: 2020/10/17 23:20:14 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	ft_strlen(const char *str)
+#include <unistd.h>
+
+void	ft_putstr_fd(char *s, int fd)
 {
-	size_t i;
+	unsigned int i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (s[i] != '\0')
+	{
+		write(fd, &s[i], sizeof(char));
 		i++;
-	return (i);
+	}
+	return ;
 }

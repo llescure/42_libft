@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/17 23:34:50 by llescure          #+#    #+#             */
-/*   Updated: 2020/10/17 23:34:54 by llescure         ###   ########.fr       */
+/*   Created: 2020/10/17 23:35:11 by llescure          #+#    #+#             */
+/*   Updated: 2020/10/17 23:35:24 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	ft_strlen(const char *str)
+#include <stdlib.h>
+
+char	*ft_strmapi(char const *s, char (*f) (unsigned int, char))
 {
-	size_t i;
+	unsigned int i;
 
 	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+
 }
