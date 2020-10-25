@@ -6,12 +6,11 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:11:51 by llescure          #+#    #+#             */
-/*   Updated: 2020/10/17 23:11:57 by llescure         ###   ########.fr       */
+/*   Updated: 2020/10/25 22:14:42 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {

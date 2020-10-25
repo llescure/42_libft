@@ -6,21 +6,11 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:30:50 by llescure          #+#    #+#             */
-/*   Updated: 2020/10/17 23:30:54 by llescure         ###   ########.fr       */
+/*   Updated: 2020/10/25 22:26:01 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-unsigned int	ft_strlen(char const *str)
-{
-	unsigned int						i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 char			*ft_strjoin(char const *s1, char const *s2)
 {

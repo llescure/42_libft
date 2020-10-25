@@ -6,9 +6,11 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:34:50 by llescure          #+#    #+#             */
-/*   Updated: 2020/10/17 23:34:54 by llescure         ###   ########.fr       */
+/*   Updated: 2020/10/25 22:26:48 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {

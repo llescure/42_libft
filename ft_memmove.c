@@ -6,15 +6,15 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:17:52 by llescure          #+#    #+#             */
-/*   Updated: 2020/10/17 23:17:56 by llescure         ###   ########.fr       */
+/*   Updated: 2020/10/25 23:03:07 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-unsigned int	ft_strlen(char *str)
+unsigned int	ft_strlen2(char *str)
 {
-	unsigned int				i;
+	unsigned int i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -31,7 +31,7 @@ void			*ft_memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	tempdest = dst;
 	tempsrc = src;
-	if (len > ft_strlen(tempdest))
+	if (len > ft_strlen2(tempdest))
 	{
 		while (i < len)
 		{

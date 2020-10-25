@@ -6,16 +6,11 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:41:55 by llescure          #+#    #+#             */
-/*   Updated: 2020/10/17 23:48:01 by llescure         ###   ########.fr       */
+/*   Updated: 2020/10/25 22:22:15 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_write(char c, int fd)
-{
-	write(fd, &c, sizeof(char));
-}
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {
@@ -24,9 +19,9 @@ void	ft_putendl_fd(char *s, int fd)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		ft_write(s[i], fd);
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
-	ft_write('\n', fd);
+	ft_putchar_fd('\n', fd);
 	return ;
 }

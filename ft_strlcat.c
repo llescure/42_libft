@@ -6,21 +6,11 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:32:51 by llescure          #+#    #+#             */
-/*   Updated: 2020/10/17 23:32:55 by llescure         ###   ########.fr       */
+/*   Updated: 2020/10/25 22:26:17 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-unsigned int	ft_strlen(char *str)
-{
-	unsigned int				i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 size_t			ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

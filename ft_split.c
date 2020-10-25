@@ -6,12 +6,11 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:20:35 by llescure          #+#    #+#             */
-/*   Updated: 2020/10/17 23:21:12 by llescure         ###   ########.fr       */
+/*   Updated: 2020/10/25 22:23:12 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 int		ft_sep(char c, char sep)
 {

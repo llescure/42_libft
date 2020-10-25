@@ -6,12 +6,11 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:15:29 by llescure          #+#    #+#             */
-/*   Updated: 2020/10/17 23:15:36 by llescure         ###   ########.fr       */
+/*   Updated: 2020/10/25 22:16:39 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 int		ft_find_size(int n)
 {
