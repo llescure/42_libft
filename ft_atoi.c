@@ -6,7 +6,7 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:10:04 by llescure          #+#    #+#             */
-/*   Updated: 2020/10/25 22:14:13 by llescure         ###   ########.fr       */
+/*   Updated: 2020/10/30 19:21:38 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,12 +55,12 @@ int		ft_atoi(const char *str)
 
 	i = 0;
 	rslt = 0;
+	sign = ft_check_sign(str);
+	if (sign == 0)
+		return (0);
 	while (str[i] == '-' || str[i] == '+' || ft_is_white_space(str[i]) == 1 ||
 			(str[i] >= '0' && str[i] <= '9'))
 	{
-		sign = ft_check_sign(str);
-		if (sign == 0)
-			return (0);
 		if (str[i] >= '0' && str[i] <= '9')
 		{
 			rslt = rslt * 10 + str[i] - '0';
