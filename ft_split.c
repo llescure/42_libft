@@ -6,16 +6,16 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:20:35 by llescure          #+#    #+#             */
-/*   Updated: 2020/10/30 17:51:46 by llescure         ###   ########.fr       */
+/*   Updated: 2020/10/30 18:52:18 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_count(char const *s, char sep)
+unsigned long		ft_count_words(char const *s, char sep)
 {
-	int i;
-	int compt;
+	unsigned long i;
+	unsigned long compt;
 
 	i = 0;
 	compt = 0;
@@ -30,10 +30,10 @@ int		ft_count(char const *s, char sep)
 	return (compt);
 }
 
-int		ft_cara(char const *s, char sep, int pos)
+unsigned long		ft_cara(char const *s, char sep, int pos)
 {
-	int i;
-	int compt;
+	unsigned long i;
+	unsigned long compt;
 
 	i = pos;
 	compt = 0;
@@ -47,51 +47,26 @@ int		ft_cara(char const *s, char sep, int pos)
 	return (compt);
 }
 
-char	**ft_split(char const *s, char c)
+char				**ft_split(char const *s, char c)
 {
 	char						**tab;
-	int							i;
-	int							j;
-	int							pos;
+	unsigned long				i;
+	unsigned long				pos;
 
 	i = 0;
 	pos = 0;
-	if (!(tab = malloc(sizeof(char *) * (ft_count(s, c) + 1))))
+	if (!(tab = malloc(sizeof(char *) * (ft_count_words(s, c) + 1))))
 		return (NULL);
-	while (i < ft_count(s, c))
+	while (i < ft_count_words(s, c))
 	{
-		j = 0;
 		if (!(tab[i] = (char *)malloc(sizeof(char) * (ft_cara(s, c, pos) + 1))))
 			return (NULL);
 		while (s[pos] == c)
 			pos++;
-		while (s[pos] != c && s[pos] != '\0')
-		{
-			tab[i][j] = s[pos];
-			pos++;
-			j++;
-		}
-		tab[i][j] = '\0';
+		ft_strlcpy(tab[i], s + pos, ft_cara(s, c, pos));
+		pos += ft_cara(s, c, pos);
 		i++;
 	}
 	tab[i] = NULL;
 	return (tab);
-}
-
-int		main(void)
-{
-	char test[] = "                 Coucou les          petits potes            ";
-	char sep = ' ';
-	char **print;
-	int i;
-
-	i = 0;
-	printf("%i\n", ft_count(test, sep));
-	printf("%i\n", ft_cara(test, sep, 0));
-	print = ft_split(test, sep);
-	while (i <= ft_count(test, sep))
-	{
-		printf("dans main %d %s\n", i, print[i]);
-		i++;
-	}
 }

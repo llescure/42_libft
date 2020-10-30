@@ -6,7 +6,7 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:33:12 by llescure          #+#    #+#             */
-/*   Updated: 2020/10/25 23:12:45 by llescure         ###   ########.fr       */
+/*   Updated: 2020/10/30 18:46:17 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ unsigned int	ft_strlen2(char *str)
 	return (i);
 }
 
-size_t			ft_strlcpy(char *dest, char *src, size_t destsize)
+size_t			ft_strlcpy(char *dest, const char *src, size_t destsize)
 {
 	size_t i;
 
@@ -33,5 +33,5 @@ size_t			ft_strlcpy(char *dest, char *src, size_t destsize)
 		i++;
 	}
 	dest[i] = '\0';
-	return (ft_strlen2(src));
+	return (ft_strlen2((char *)src));
 }

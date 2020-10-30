@@ -6,16 +6,16 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:37:02 by llescure          #+#    #+#             */
-/*   Updated: 2020/10/25 23:21:13 by llescure         ###   ########.fr       */
+/*   Updated: 2020/10/29 14:03:24 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_trim_beg(char const *s1, char const *set)
+unsigned long	ft_trim_beg(char const *s1, char const *set)
 {
-	int i;
-	int j;
+	unsigned long i;
+	unsigned long j;
 
 	i = 0;
 	j = 0;
@@ -33,10 +33,10 @@ int		ft_trim_beg(char const *s1, char const *set)
 	return (i);
 }
 
-int		ft_trim_last(char const *s1, char const *set)
+unsigned long	ft_trim_last(char const *s1, char const *set)
 {
-	int i;
-	int j;
+	unsigned long i;
+	unsigned long j;
 
 	i = ft_strlen(s1) - 1;
 	j = 0;
@@ -54,12 +54,12 @@ int		ft_trim_last(char const *s1, char const *set)
 	return (ft_strlen(s1) - i - 1);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char			*ft_strtrim(char const *s1, char const *set)
 {
 	char						*rslt;
-	int							i;
-	int							j;
-	int							cara;
+	unsigned long				i;
+	unsigned long				j;
+	unsigned long				cara;
 
 	cara = ft_strlen(s1) - ft_trim_beg(s1, set) - ft_trim_last(s1, set);
 	if (!(rslt = malloc(sizeof(char) * cara + 1)))
