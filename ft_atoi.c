@@ -6,7 +6,7 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:10:04 by llescure          #+#    #+#             */
-/*   Updated: 2020/10/30 19:21:38 by llescure         ###   ########.fr       */
+/*   Updated: 2020/10/31 13:13:52 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int		ft_check_sign(const char *str)
 int		ft_atoi(const char *str)
 {
 	int i;
-	int rslt;
+	long rslt;
 	int sign;
 
 	i = 0;

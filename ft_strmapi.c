@@ -6,7 +6,7 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:35:11 by llescure          #+#    #+#             */
-/*   Updated: 2020/10/29 15:37:58 by llescure         ###   ########.fr       */
+/*   Updated: 2020/10/31 13:00:20 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,5 @@ char	*ft_strmapi(char const *s, char (*f) (unsigned int, char))
 		i++;
 	}
 	final[i] = '\0';
+	return (final);
 }

@@ -6,7 +6,7 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:16:13 by llescure          #+#    #+#             */
-/*   Updated: 2020/10/25 22:20:26 by llescure         ###   ########.fr       */
+/*   Updated: 2020/10/31 14:18:08 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ const void	*ft_memchr(const void *s, int c, size_t n)
 	str = s;
 	while (str[i] != '\0' && i < n)
 	{
-		if (str[i] == (unsigned char)c)
+		if (str[i] == (char)c)
 			return ((char *)&str[i]);
 		i++;
 	}

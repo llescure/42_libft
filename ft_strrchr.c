@@ -6,7 +6,7 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:36:37 by llescure          #+#    #+#             */
-/*   Updated: 2020/10/25 22:28:06 by llescure         ###   ########.fr       */
+/*   Updated: 2020/10/31 12:58:58 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	int i;
-	int compt;
+	unsigned long				i;
+	int							compt;
 
 	compt = 0;
 	i = 0;
