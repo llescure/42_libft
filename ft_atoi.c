@@ -6,7 +6,7 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:10:04 by llescure          #+#    #+#             */
-/*   Updated: 2020/10/31 13:13:52 by llescure         ###   ########.fr       */
+/*   Updated: 2020/10/31 16:56:20 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int		ft_check_sign(const char *str)
 		}
 		if (str[i] == '+')
 		{
-			if (sign == -1 || str[i + 1] == '+' ||
+			if (sign == -1 || str[i + 1] == '-' || str[i + 1] == '+' ||
 				ft_is_white_space(str[i + 1]) == 1)
 				return (0);
 		}
