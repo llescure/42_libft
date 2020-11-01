@@ -6,7 +6,7 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:10:04 by llescure          #+#    #+#             */
-/*   Updated: 2020/10/31 16:56:20 by llescure         ###   ########.fr       */
+/*   Updated: 2020/11/01 20:51:30 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ int		ft_is_white_space(char c)
 	return (0);
 }
 
-int		ft_check_sign(const char *str)
+long	ft_check_sign(const char *str)
 {
-	int sign;
-	int i;
+	long sign;
+	long i;
 
 	sign = 1;
 	i = 0;
@@ -51,22 +51,18 @@ int		ft_atoi(const char *str)
 {
 	int i;
 	long rslt;
-	int sign;
+	long sign;
 
 	i = 0;
 	rslt = 0;
 	sign = ft_check_sign(str);
 	if (sign == 0)
 		return (0);
-	while (str[i] == '-' || str[i] == '+' || ft_is_white_space(str[i]) == 1 ||
-			(str[i] >= '0' && str[i] <= '9'))
+	while (str[i] == '-' || str[i] == '+' || ft_is_white_space(str[i]) == 1)
+		i++;
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		if (str[i] >= '0' && str[i] <= '9')
-		{
-			rslt = rslt * 10 + str[i] - '0';
-			if (!(str[i + 1] >= '0' && str[i + 1] <= '9'))
-				return (sign * rslt);
-		}
+		rslt = rslt * 10 + str[i] - '0';
 		i++;
 	}
 	return (sign * rslt);
