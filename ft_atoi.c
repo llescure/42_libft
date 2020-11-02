@@ -6,7 +6,7 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:10:04 by llescure          #+#    #+#             */
-/*   Updated: 2020/11/01 20:51:30 by llescure         ###   ########.fr       */
+/*   Updated: 2020/11/02 20:41:37 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ int		ft_is_white_space(char c)
 
 long	ft_check_sign(const char *str)
 {
-	long sign;
-	long i;
+	long						sign;
+	long						i;
 
 	sign = 1;
 	i = 0;
@@ -49,9 +49,9 @@ long	ft_check_sign(const char *str)
 
 int		ft_atoi(const char *str)
 {
-	int i;
-	long rslt;
-	long sign;
+	int						i;
+	long					rslt;
+	long					sign;
 
 	i = 0;
 	rslt = 0;

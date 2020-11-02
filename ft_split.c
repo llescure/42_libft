@@ -6,7 +6,7 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:20:35 by llescure          #+#    #+#             */
-/*   Updated: 2020/11/01 20:42:09 by llescure         ###   ########.fr       */
+/*   Updated: 2020/11/02 20:37:03 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ char				**ft_split(char const *s, char c)
 			return (NULL);
 		while (s[pos] == c)
 			pos++;
-		ft_strlcpy(tab[i], s + pos, ft_cara(s, c, pos));
+		ft_memcpy(tab[i], s + pos, ft_cara(s, c, pos));
 		pos += ft_cara(s, c, pos);
 		i++;
 	}
