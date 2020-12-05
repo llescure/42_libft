@@ -6,7 +6,7 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:15:29 by llescure          #+#    #+#             */
-/*   Updated: 2020/11/01 20:43:12 by llescure         ###   ########.fr       */
+/*   Updated: 2020/12/05 20:20:27 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_itoa(int n)
 	int			j;
 
 	store = n;
-	if (!(rslt = malloc(sizeof(char) * ft_find_size(n))))
+	if (!(rslt = malloc(sizeof(char) * ft_find_size(n) + 1)))
 		return (NULL);
 	i = ft_find_size(n);
 	j = 0;

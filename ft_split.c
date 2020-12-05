@@ -6,7 +6,7 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:20:35 by llescure          #+#    #+#             */
-/*   Updated: 2020/11/02 20:37:03 by llescure         ###   ########.fr       */
+/*   Updated: 2020/12/05 19:39:46 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,6 @@ char				**ft_split(char const *s, char c)
 		i++;
 	}
 	tab[i] = NULL;
+	free(tab[i]);
 	return (tab);
 }

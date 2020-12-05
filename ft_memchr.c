@@ -6,7 +6,7 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:16:13 by llescure          #+#    #+#             */
-/*   Updated: 2020/11/01 21:53:55 by llescure         ###   ########.fr       */
+/*   Updated: 2020/12/05 16:23:59 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,7 @@ const void	*ft_memchr(const void *s, int c, size_t n)
 			return ((char *)&str[i]);
 		i++;
 	}
+	if (c == '\0')
+		return ((char *)&str[i]);
 	return (NULL);
 }
