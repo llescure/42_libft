@@ -6,7 +6,7 @@
 /*   By: llescure <llescure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/18 19:46:44 by llescure          #+#    #+#             */
-/*   Updated: 2020/12/18 19:48:03 by llescure         ###   ########.fr       */
+/*   Updated: 2020/12/20 19:41:10 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,14 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list *temp;
+	t_list	*temp;
 
-	if((lst == NULL) || !(*del))
+	if ((lst == NULL) || !(*del))
 		return ;
-	temp = *lst;
-	while (temp != NULL)
+	while (*lst != NULL)
 	{
-		(*del)(temp->content);
-		free(temp->content);
-		temp = temp->next;
+		temp = (*lst)->next;
+		ft_lstdelone(*lst, *del);
+		*lst = temp;
 	}
-	temp->content = NULL;
 }

@@ -6,16 +6,11 @@
 /*   By: llescure <llescure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/17 19:41:56 by llescure          #+#    #+#             */
-/*   Updated: 2020/12/17 21:55:31 by llescure         ###   ########.fr       */
+/*   Updated: 2020/12/20 18:41:55 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	del(void *content)
-{
-	free(content);
-}
 
 int	main(void)
 {
@@ -32,7 +27,6 @@ int	main(void)
 	ft_lstadd_front(&my_list, new);
 	ft_lstadd_front(&my_list, new2);
 	ft_lstadd_back(&my_list, new3);
-	ft_lstdelone(new3, &del);
 	last = ft_lstlast(my_list);
 	while (my_list != 0)
 	{

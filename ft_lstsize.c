@@ -6,7 +6,7 @@
 /*   By: llescure <llescure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/15 19:47:38 by llescure          #+#    #+#             */
-/*   Updated: 2020/12/17 21:06:46 by llescure         ###   ########.fr       */
+/*   Updated: 2020/12/20 19:44:10 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int compt;
-	t_list *temp;
+	int		compt;
+	t_list	*temp;
 
 	compt = 0;
 	if (lst == NULL)

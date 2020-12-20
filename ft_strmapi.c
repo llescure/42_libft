@@ -6,7 +6,7 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:35:11 by llescure          #+#    #+#             */
-/*   Updated: 2020/10/31 13:00:20 by llescure         ###   ########.fr       */
+/*   Updated: 2020/12/20 20:49:04 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmapi(char const *s, char (*f) (unsigned int, char))
 
 	if (!(final = malloc(sizeof(char) * ft_strlen(s) + 1)))
 		return (NULL);
-	strlcpy(final, s, ft_strlen(s));
+	ft_strlcpy(final, s, ft_strlen(s));
 	i = 0;
 	while (s[i] != '\0')
 	{
