@@ -6,7 +6,7 @@
 /*   By: llescure <llescure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/17 19:41:56 by llescure          #+#    #+#             */
-/*   Updated: 2020/12/20 18:41:55 by llescure         ###   ########.fr       */
+/*   Updated: 2020/12/21 21:53:22 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 int	main(void)
 {
 	t_list *my_list;
-	t_list *new;	
+	t_list *new;
 	t_list *new2;
 	t_list *new3;
 	t_list *last;
 
-	my_list = ft_lstnew((void *)8);	
+	my_list = ft_lstnew((void *)8);
 	new = ft_lstnew((void *)10);
 	new2 = ft_lstnew((void *)14);
 	new3 = ft_lstnew((void *)6);

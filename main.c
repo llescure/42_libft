@@ -6,7 +6,7 @@
 /*   By: llescure <llescure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 18:25:53 by llescure          #+#    #+#             */
-/*   Updated: 2020/12/05 19:38:22 by llescure         ###   ########.fr       */
+/*   Updated: 2020/12/21 21:53:54 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 unsigned long		ft_count_words2(char const *s, char sep)
 {
-	unsigned long i;
-	unsigned long compt;
+	unsigned long	i;
+	unsigned long	compt;
 
 	i = 0;
 	compt = 0;
