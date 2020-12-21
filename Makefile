@@ -6,7 +6,7 @@
 #    By: llescure <llescure@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/26 17:55:58 by llescure          #+#    #+#              #
-#    Updated: 2020/12/21 18:46:04 by llescure         ###   ########.fr        #
+#    Updated: 2020/12/21 18:49:39 by llescure         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,8 +68,6 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 RM = rm -f
-
-CLEAN = clean
 
 ifdef WITH_BONUS
 ALL_OBJS = $(OBJS) $(BONUS_OBJS)
