@@ -6,7 +6,7 @@
 #    By: llescure <llescure@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/26 17:55:58 by llescure          #+#    #+#              #
-#    Updated: 2020/12/20 15:09:44 by llescure         ###   ########.fr        #
+#    Updated: 2020/12/21 18:46:04 by llescure         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,7 +81,6 @@ all:	 $(NAME)
 
 $(NAME) : $(ALL_OBJS)
 			ar rcs $(NAME) $(ALL_OBJS)
-			ranlib $(NAME)
 
 %.o : %.c $(HEADER)
 			$(CC)  -c $(CFLAGS||) $< -o $@
