@@ -6,7 +6,7 @@
 /*   By: llescure <llescure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 18:25:53 by llescure          #+#    #+#             */
-/*   Updated: 2020/12/21 21:53:54 by llescure         ###   ########.fr       */
+/*   Updated: 2021/01/04 22:14:14 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,15 @@ int main(void)
 		printf("%s\n", rslt[i]);
 		i++;
 	}
+	
+	// TEST MEMCHR
+
+#include "string.h"
+
+	char *s = "coucou \0";
+	char c = '\0';
+	char *s2 = "coucou \0";
+	char c2 = '\0';
+	printf("actual function:%s\n", memchr(s, c, 10));
+	printf("my function:%s\n", ft_memchr(s2, c2, 10));
 }
