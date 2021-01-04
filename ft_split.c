@@ -12,6 +12,16 @@
 
 #include "libft.h"
 
+void				ft_free(char **s, unsigned long pos)
+{
+	while (pos > 0)
+	{
+		pos--;
+		free(s[pos]);
+	}
+	free(s);
+}
+
 unsigned long		ft_count_words(char const *s, char sep)
 {
 	unsigned long i;
@@ -59,7 +69,7 @@ char				**ft_split(char const *s, char c)
 		return (NULL);
 	while (i < ft_count_words(s, c))
 	{
-		if (!(tab[i] = (char *)malloc(sizeof(char) * (ft_cara(s, c, pos) + 1))))
+		if (!(tab[i] = (char *)malloc(sizeof(char) * (ft_cara(s, c, pos)))))
 			return (NULL);
 		while (s[pos] == c)
 			pos++;

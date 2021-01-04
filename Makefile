@@ -81,7 +81,7 @@ $(NAME) : $(ALL_OBJS)
 			ar rcs $(NAME) $(ALL_OBJS)
 
 %.o : %.c $(HEADER)
-			$(CC)  -c $(CFLAGS||) $< -o $@
+			$(CC)  -c $(CFLAGS) $< -o $@
 
 clean:
 		$(RM) $(OBJS) $(BONUS_OBJS)
