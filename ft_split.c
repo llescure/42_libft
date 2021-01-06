@@ -6,7 +6,7 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:20:35 by llescure          #+#    #+#             */
-/*   Updated: 2021/01/05 16:06:37 by llescure         ###   ########.fr       */
+/*   Updated: 2021/01/06 10:08:55 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,10 @@ char				**ft_split(char const *s, char c)
 	while (i < ft_count_words(s, c))
 	{
 		if (!(tab[i] = (char *)malloc(sizeof(char) * (ft_cara(s, c, pos) + 1))))
+		{
+			ft_free(tab, i);
 			return (NULL);
+		}
 		while (s[pos] == c)
 			pos++;
 		ft_memcpy(tab[i], s + pos, ft_cara(s, c, pos));
