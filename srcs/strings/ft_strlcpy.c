@@ -6,11 +6,11 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:33:12 by llescure          #+#    #+#             */
-/*   Updated: 2020/11/02 20:32:37 by llescure         ###   ########.fr       */
+/*   Updated: 2021/05/06 15:24:55 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../include/libft.h"
 
 size_t			ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

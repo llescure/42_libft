@@ -6,11 +6,11 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:36:37 by llescure          #+#    #+#             */
-/*   Updated: 2020/10/31 18:47:06 by llescure         ###   ########.fr       */
+/*   Updated: 2021/05/06 15:25:47 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../include/libft.h"
 
 char	*ft_strrchr(const char *str, int c)
 {

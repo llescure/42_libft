@@ -6,11 +6,11 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:37:02 by llescure          #+#    #+#             */
-/*   Updated: 2020/10/29 14:03:24 by llescure         ###   ########.fr       */
+/*   Updated: 2021/05/06 15:25:58 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../include/libft.h"
 
 unsigned long	ft_trim_beg(char const *s1, char const *set)
 {

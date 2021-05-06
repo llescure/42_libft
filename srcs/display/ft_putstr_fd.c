@@ -6,11 +6,11 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:20:10 by llescure          #+#    #+#             */
-/*   Updated: 2020/12/21 21:33:38 by llescure         ###   ########.fr       */
+/*   Updated: 2021/05/06 15:20:47 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../include/libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

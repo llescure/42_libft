@@ -6,11 +6,11 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:30:50 by llescure          #+#    #+#             */
-/*   Updated: 2020/10/25 22:26:01 by llescure         ###   ########.fr       */
+/*   Updated: 2021/05/06 15:24:39 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../include/libft.h"
 
 char			*ft_strjoin(char const *s1, char const *s2)
 {

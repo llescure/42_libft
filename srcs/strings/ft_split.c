@@ -6,11 +6,11 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:20:35 by llescure          #+#    #+#             */
-/*   Updated: 2021/01/06 10:08:55 by llescure         ###   ########.fr       */
+/*   Updated: 2021/05/06 15:24:17 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../include/libft.h"
 
 void				ft_free(char **s, unsigned long pos)
 {

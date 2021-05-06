@@ -6,11 +6,11 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:17:25 by llescure          #+#    #+#             */
-/*   Updated: 2020/12/05 16:04:05 by llescure         ###   ########.fr       */
+/*   Updated: 2021/05/06 15:23:33 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../include/libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

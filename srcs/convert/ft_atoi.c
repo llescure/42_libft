@@ -6,11 +6,11 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:10:04 by llescure          #+#    #+#             */
-/*   Updated: 2020/11/02 20:41:37 by llescure         ###   ########.fr       */
+/*   Updated: 2021/05/06 15:19:05 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../include/libft.h"
 
 int		ft_is_white_space(char c)
 {

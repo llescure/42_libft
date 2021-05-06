@@ -6,11 +6,11 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:35:11 by llescure          #+#    #+#             */
-/*   Updated: 2020/12/20 20:49:04 by llescure         ###   ########.fr       */
+/*   Updated: 2021/05/06 15:25:16 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../include/libft.h"
 
 char	*ft_strmapi(char const *s, char (*f) (unsigned int, char))
 {

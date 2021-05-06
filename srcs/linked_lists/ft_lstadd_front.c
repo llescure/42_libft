@@ -6,11 +6,11 @@
 /*   By: llescure <llescure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/15 18:55:52 by llescure          #+#    #+#             */
-/*   Updated: 2020/12/20 19:39:22 by llescure         ###   ########.fr       */
+/*   Updated: 2021/05/06 15:21:11 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../include/libft.h"
 
 void	ft_lstadd_front(t_list **alst, t_list *new)
 {

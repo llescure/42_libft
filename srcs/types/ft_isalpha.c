@@ -6,11 +6,11 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:13:07 by llescure          #+#    #+#             */
-/*   Updated: 2020/10/25 22:15:32 by llescure         ###   ########.fr       */
+/*   Updated: 2021/05/06 15:26:37 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../include/libft.h"
 
 int		ft_isalpha(int c)
 {

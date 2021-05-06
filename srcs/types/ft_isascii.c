@@ -6,11 +6,11 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:13:34 by llescure          #+#    #+#             */
-/*   Updated: 2020/11/01 21:59:42 by llescure         ###   ########.fr       */
+/*   Updated: 2021/05/06 15:26:44 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../include/libft.h"
 
 int	ft_isascii(int c)
 {

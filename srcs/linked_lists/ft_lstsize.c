@@ -6,11 +6,11 @@
 /*   By: llescure <llescure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/15 19:47:38 by llescure          #+#    #+#             */
-/*   Updated: 2020/12/20 19:44:10 by llescure         ###   ########.fr       */
+/*   Updated: 2021/05/06 15:22:28 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../include/libft.h"
 
 int	ft_lstsize(t_list *lst)
 {

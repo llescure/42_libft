@@ -6,11 +6,11 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/18 22:29:26 by llescure          #+#    #+#             */
-/*   Updated: 2020/10/25 22:22:32 by llescure         ###   ########.fr       */
+/*   Updated: 2021/05/06 15:20:36 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../include/libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

@@ -6,11 +6,11 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:37:39 by llescure          #+#    #+#             */
-/*   Updated: 2020/12/05 18:03:31 by llescure         ###   ########.fr       */
+/*   Updated: 2021/05/06 15:26:08 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../include/libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

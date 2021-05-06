@@ -6,11 +6,11 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 23:14:39 by llescure          #+#    #+#             */
-/*   Updated: 2020/10/31 14:02:49 by llescure         ###   ########.fr       */
+/*   Updated: 2021/05/06 15:26:52 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../include/libft.h"
 
 int	ft_isdigit(int c)
 {
