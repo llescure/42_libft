@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_double_lstsize.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llescure <llescure@student.42.fr>          +#+  +:+       +#+        */
+/*   By: llescure <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/15 19:47:38 by llescure          #+#    #+#             */
-/*   Updated: 2021/05/06 15:22:28 by llescure         ###   ########.fr       */
+/*   Created: 2021/05/11 14:50:35 by llescure          #+#    #+#             */
+/*   Updated: 2021/05/11 15:15:17 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/libft.h"
+#include "../../include/libft"
 
-int	ft_lstsize(t_list *lst)
+int		ft_double_lstsize(t_double_list *lst)
 {
 	int		compt;
-	t_list	*temp;
+	t_double_list	*temp;
 
 	compt = 0;
 	if (lst == NULL)

@@ -6,7 +6,7 @@
 /*   By: llescure <llescure@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/25 20:02:11 by llescure          #+#    #+#             */
-/*   Updated: 2021/05/06 15:36:26 by llescure         ###   ########.fr       */
+/*   Updated: 2021/05/11 16:36:16 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,13 @@ typedef struct	s_list
 	void			*content;
 	struct s_list	*next;
 }				t_list;
+
+typedef struct	s_double_list
+{
+	void					*content;
+	struct s_double_list	*next;
+	struct s_double_list	*previous;
+}				t_double_list;
 
 /*
  ** Strings
@@ -100,6 +107,23 @@ void			ft_lstclear(t_list **lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 		void (*del)(void *));
+
+/*
+ ** Double_linked_lists
+*/
+
+t_double_list	*ft_double_lstnew(void *content);
+void			ft_double_lstadd_front(t_double_list **alst, t_double_list *new);
+void			ft_double_lstadd_back(t_double_list **alst, t_double_list *new);
+void			ft_double_lstdelone(t_double_list **lst);
+void			case_middle_node(t_double_list **lst);
+void			case_first_node(t_double_list **lst);
+void			case_last_node(t_double_list **lst);
+void			ft_double_lstclear(t_double_list **lst, t_double_list *del);
+t_double_list	*ft_double_lstfirst(t_double_list *lst);
+t_double_list	*ft_double_lstlast(t_double_list *lst);
+int				*ft_double_lstsize(t_double_list *lst);
+void			*ft_double_print_list(t_list *lst);
 
 /*
  ** Get_next_line

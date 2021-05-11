@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_double_lstnew.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llescure <llescure@student.42.fr>          +#+  +:+       +#+        */
+/*   By: llescure <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/15 21:36:50 by llescure          #+#    #+#             */
-/*   Updated: 2021/05/06 15:21:31 by llescure         ###   ########.fr       */
+/*   Created: 2021/05/11 12:05:29 by llescure          #+#    #+#             */
+/*   Updated: 2021/05/11 12:05:47 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+t_double_list	*ft_double_lstnew(void *content)
 {
-	t_list	*temp;
+	t_double_list *new_list;
 
-	if ((lst != NULL) || ((*del)))
-	{
-		temp = lst->next;
-		(*del)(lst->content);
-		free(lst);
-	}
-	return ;
+	if (!(new_list = malloc(sizeof(*new_list))))
+		return (NULL);
+	new_list->content = content;
+	new_list->next = NULL;
+	new_list->previous = NULL;
+	return (new_list);
 }

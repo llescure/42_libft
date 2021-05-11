@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_double_lstfirst.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llescure <llescure@student.42.fr>          +#+  +:+       +#+        */
+/*   By: llescure <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/18 19:46:44 by llescure          #+#    #+#             */
-/*   Updated: 2021/05/06 15:21:21 by llescure         ###   ########.fr       */
+/*   Created: 2021/05/11 12:06:22 by llescure          #+#    #+#             */
+/*   Updated: 2021/05/11 12:13:41 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/libft.h"
+#include ".../.../include/libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+t_double_list	*ft_double_lstfirst(t_double_list *lst)
 {
-	t_list	*temp;
-
-	if ((lst == NULL) || !(*del))
-		return ;
-	while (*lst != NULL)
-	{
-		temp = (*lst)->next;
-		ft_lstdelone(*lst, *del);
-		*lst = temp;
-	}
+	t_double_list *new;
+	if (lst == NULL)
+		return (NULL);
+	new = lst;
+	while (new->previous != NULL)
+		new = new->previous;
+	return (new);
 }

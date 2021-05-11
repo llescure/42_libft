@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_double_lstadd_back.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llescure <llescure@student.42.fr>          +#+  +:+       +#+        */
+/*   By: llescure <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/15 18:55:52 by llescure          #+#    #+#             */
-/*   Updated: 2021/05/06 15:21:11 by llescure         ###   ########.fr       */
+/*   Created: 2021/05/11 12:04:32 by llescure          #+#    #+#             */
+/*   Updated: 2021/05/11 12:04:42 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/libft.h"
 
-void	ft_lstadd_front(t_list **alst, t_list *new)
+void	ft_double_lstadd_back(t_double_list **alst, t_double_list *new)
 {
-	if (alst != NULL)
+	if (alst == NULL)
+		return ;
+	new->next = NULL;
+	if (*alst == NULL)
 	{
-		new->next = *alst;
+		new->previous = NULL;
 		*alst = new;
+		return ;
 	}
+	while (*alst->next != NULL)
+		*alst = *alst->next;
+	new->previous = *alst;
+	*alst->next = new;
 }

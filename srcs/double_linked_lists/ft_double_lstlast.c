@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_double_lstlast.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llescure <llescure@student.42.fr>          +#+  +:+       +#+        */
+/*   By: llescure <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/15 21:43:07 by llescure          #+#    #+#             */
-/*   Updated: 2021/05/06 15:21:43 by llescure         ###   ########.fr       */
+/*   Created: 2021/05/11 12:13:50 by llescure          #+#    #+#             */
+/*   Updated: 2021/05/11 12:16:01 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/libft.h"
+include "../../include/libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+t_double_list	ft_double_lstlast(t_double *lst)
 {
-	t_list *temp;
+	t_double_list	*temp;
 
+	if (lst == NULL)
+		return (NULL);
 	temp = lst;
-	while (temp != NULL)
-	{
-		f(temp->content);
+	while (temp->next != NULL)
 		temp = temp->next;
-	}
+	return (temp);
 }
