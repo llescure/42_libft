@@ -6,7 +6,7 @@
 /*   By: llescure <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/11 12:16:45 by llescure          #+#    #+#             */
-/*   Updated: 2021/05/11 22:37:12 by llescure         ###   ########.fr       */
+/*   Updated: 2021/05/12 11:18:39 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,37 @@
 
 void	ft_double_lstdelone(t_double_list **lst, int pos)
 {
+	t_double_list	*temp;
+
 	if (*lst == NULL || pos < 0)
 		return ;
-	while (*lst->prev != NULL)
-		*lst = *lst->prev;
+	temp = *lst;
+	while (temp->previous != NULL)
+		temp = temp->previous;
 	if (pos == 0)
-		case_first_node(lst);
-	else if (pos == ft_double_lstsize(lst))
-		case_last_node(lst);
+		case_first_node(&temp);
+	else if (pos == ft_double_lstsize(temp))
+		case_last_node(&temp);
 }
 
-void	case_first_node(t_double_lst **lst)
+void	case_first_node(t_double_list **lst)
 {
 	t_double_list	*temp;
 
 	temp = *lst;
-	*lst = temp->next;;
-	temp->next->prev = temp->next;
+	*lst = temp->next;
+	temp->next->previous = temp->next;
 	free(temp);
 }
 
-void	case_last_node(t_double_lst **lst)
+void	case_last_node(t_double_list **lst)
 {
 	t_double_list	*temp;
 
-	while (*lst->next != NULL)
-		*lst = *lst->next;
+	while ((*lst)->next != NULL)
+		*lst = (*lst)->next;
 	temp = *lst;
-	*lst = temp->prev;
-	temp->prev->next = temp->prev;
+	*lst = temp->previous;
+	temp->previous->next = temp->previous;
 	free(temp);
 }

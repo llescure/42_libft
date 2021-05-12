@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_double_lstadd_front.c                           :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llescure <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: llescure <llescure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/11 12:05:00 by llescure          #+#    #+#             */
-/*   Updated: 2021/05/12 10:57:56 by llescure         ###   ########.fr       */
+/*   Created: 2020/12/15 21:36:50 by llescure          #+#    #+#             */
+/*   Updated: 2021/05/12 10:41:16 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/libft.h"
 
-void	ft_double_lstadd_front(t_double_list **alst, t_double_list *new)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	new->previous = NULL;
-	new->next = *alst;
-	if (*alst != NULL)
-		(*alst)->previous = new;
-	*alst = new;
+	t_list	*temp;
+
+	if ((lst != NULL) || ((*del)))
+	{
+		temp = lst->next;
+		(*del)(lst->content);
+		free(lst);
+	}
+	return ;
 }

@@ -6,15 +6,15 @@
 /*   By: llescure <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/11 14:50:35 by llescure          #+#    #+#             */
-/*   Updated: 2021/05/11 15:15:17 by llescure         ###   ########.fr       */
+/*   Updated: 2021/05/12 11:24:31 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/libft"
+#include "../../include/libft.h"
 
-int		ft_double_lstsize(t_double_list *lst)
+int	ft_double_lstsize(t_double_list *lst)
 {
-	int		compt;
+	int				compt;
 	t_double_list	*temp;
 
 	compt = 0;

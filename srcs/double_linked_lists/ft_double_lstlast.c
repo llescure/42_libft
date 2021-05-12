@@ -6,13 +6,13 @@
 /*   By: llescure <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/11 12:13:50 by llescure          #+#    #+#             */
-/*   Updated: 2021/05/11 12:16:01 by llescure         ###   ########.fr       */
+/*   Updated: 2021/05/12 11:16:11 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-include "../../include/libft.h"
+#include "../../include/libft.h"
 
-t_double_list	ft_double_lstlast(t_double *lst)
+t_double_list	*ft_double_lstlast(t_double_list *lst)
 {
 	t_double_list	*temp;
 

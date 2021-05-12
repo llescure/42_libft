@@ -6,7 +6,7 @@
 /*   By: llescure <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/11 16:35:01 by llescure          #+#    #+#             */
-/*   Updated: 2021/05/11 16:53:27 by llescure         ###   ########.fr       */
+/*   Updated: 2021/05/12 11:02:36 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,21 @@
 
 void	ft_double_lstclear(t_double_list **lst, t_double_list *del)
 {
-	t_list	*temp;
+	t_double_list	*temp;
 
 	if (*lst == NULL || del == NULL)
 		return ;
-	while (*lst->previous != NULL)
-		*lst = *lst->previous;
-	while (*lst->next != NULL)
+	while ((*lst)->previous != NULL)
+		*lst = (*lst)->previous;
+	while ((*lst)->next != NULL)
 	{
 		if (*lst == del)
 			while (del->next != NULL)
 			{
-				temp = *lst->next;
+				temp = (*lst)->next;
 				free(del);
 				free(*lst);
 			}
-		*lst = *lst->next;
+		*lst = (*lst)->next;
 	}
 }

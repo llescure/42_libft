@@ -6,7 +6,7 @@
 /*   By: llescure <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/11 12:04:32 by llescure          #+#    #+#             */
-/*   Updated: 2021/05/11 12:04:42 by llescure         ###   ########.fr       */
+/*   Updated: 2021/05/12 10:55:43 by llescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,20 @@
 
 void	ft_double_lstadd_back(t_double_list **alst, t_double_list *new)
 {
+	t_double_list *temp;
+
 	if (alst == NULL)
 		return ;
 	new->next = NULL;
-	if (*alst == NULL)
+	temp = *alst;
+	if (temp == NULL)
 	{
 		new->previous = NULL;
-		*alst = new;
+		temp = new;
 		return ;
 	}
-	while (*alst->next != NULL)
-		*alst = *alst->next;
-	new->previous = *alst;
-	*alst->next = new;
+	while (temp->next != NULL)
+		temp = temp->next;
+	new->previous = temp;
+	temp->next = new;
 }
